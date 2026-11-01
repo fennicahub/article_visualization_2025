@@ -4,7 +4,14 @@ library(ggplot2)
 
 # Fetch Fennica data from Rahti:
 # https://fennica-fennica.2.rahtiapp.fi/harmonized_fennica.html
-# f <- read.csv2("https://a3s.fi/swift/v1/AUTH_3c0ccb602fa24298a6fe3ae224ca022f/fennica-container/output.tables/harmonized_fennica19.csv", sep ="\t")
+url <- "https://a3s.fi/swift/v1/AUTH_3c0ccb602fa24298a6fe3ae224ca022f/fennica-container/output.tables/harmonized_fennica19.csv"
+f <- read.delim(url, sep = "\t", quote = "", colClasses = "character")
+#f <- read.csv2(f, sep ="\t")
+
+#url <- "https://a3s.fi/swift/v1/AUTH_3c0ccb602fa24298a6fe3ae224ca022f/fennica-container/output.tables/harmonized_fennica.feather" 
+#library(arrow)
+#df <- read_feather(url)
+
 
 #fig. 4.1 Data preparation and quality control: Fennica?
 #- quality control (reveal problems)
